@@ -7,13 +7,13 @@ body {
 }
 
 div#header {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid green;
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
 }
 
 div#logo a {
-    color: black;
+    color: green;
     float: left;
     font-size: 18px;
     font-weight: bold;
@@ -25,7 +25,7 @@ div#header #navigation {
 }
 
 div#header #navigation a {
-    color: black;
+    color: green;
     font-size: 18px;
     font-weight: bold;
     margin-left: 12px;
@@ -34,8 +34,8 @@ div#header #navigation a {
 }
 
 div#footer {
-    border-top: solid 2px black;
-    color: #555;
+    border-top: solid 2px green;
+    color: green;
     font-size: 12px;
     margin-top: 30px;
     padding: 12px 0px 12px 0px;
