@@ -1,3 +1,4 @@
 site
 *.hi
 *.o
+_site
