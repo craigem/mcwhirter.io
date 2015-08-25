@@ -44,6 +44,10 @@ div#footer {
     right: 1%;
 }
 
+div#footer a {
+    color: green;
+}
+
 h1 {
     font-size: 24px;
 }
@@ -58,7 +62,14 @@ div.info {
     font-style: italic;
 }
 
-div#content img {
+div#content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div#footer img {
     position:absolute;
     bottom: 1%;
     left: 1%;
