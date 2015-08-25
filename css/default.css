@@ -3,7 +3,7 @@ body {
     background-color: black;
     font-size: 16px;
     margin: 0px auto 0px auto;
-    width: 600px;
+    width: 100%;
 }
 
 div#header {
@@ -34,12 +34,14 @@ div#header #navigation a {
 }
 
 div#footer {
-    border-top: solid 2px green;
     color: green;
     font-size: 12px;
     margin-top: 30px;
     padding: 12px 0px 12px 0px;
     text-align: right;
+    position:absolute;
+    bottom:1%;
+    right: 1%;
 }
 
 h1 {
@@ -51,7 +53,7 @@ h2 {
 }
 
 div.info {
-    color: #555;
+    color: green;
     font-size: 14px;
     font-style: italic;
 }
