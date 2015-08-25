@@ -34,10 +34,11 @@ div#header #navigation a {
 }
 
 div#footer {
+    width: 100%;
     color: green;
     font-size: 12px;
     margin-top: 30px;
-    padding: 12px 0px 12px 0px;
+    padding: 0px;
     text-align: right;
     position:absolute;
     bottom:1%;
@@ -73,4 +74,5 @@ div#footer img {
     position:absolute;
     bottom: 1%;
     left: 1%;
+    padding-left: 1%;
 }
