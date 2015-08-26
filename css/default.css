@@ -1,5 +1,5 @@
 body {
-    color: green;
+    color: rgb(0,204,0);
     background-color: black;
     font-size: 16px;
     margin: 0px auto 0px auto;
@@ -7,13 +7,13 @@ body {
 }
 
 div#header {
-    border-bottom: 2px solid green;
+    border-bottom: 2px solid rgb(0,204,0);
     margin-bottom: 30px;
     padding: 12px 0px 12px 0px;
 }
 
 div#logo a {
-    color: green;
+    color: rgb(0,204,0);
     float: left;
     font-size: 18px;
     font-weight: bold;
@@ -25,7 +25,7 @@ div#header #navigation {
 }
 
 div#header #navigation a {
-    color: green;
+    color: rgb(0,204,0);
     font-size: 18px;
     font-weight: bold;
     margin-left: 12px;
@@ -35,7 +35,7 @@ div#header #navigation a {
 
 div#footer {
     width: 100%;
-    color: green;
+    color: rgb(0,204,0);
     font-size: 12px;
     margin-top: 30px;
     padding: 0px;
@@ -46,7 +46,7 @@ div#footer {
 }
 
 div#footer a {
-    color: green;
+    color: rgb(0,204,0);
 }
 
 h1 {
@@ -58,7 +58,7 @@ h2 {
 }
 
 div.info {
-    color: green;
+    color: rgb(0,204,0);
     font-size: 14px;
     font-style: italic;
 }
