@@ -1,4 +1,10 @@
+@font-face {
+    font-family: DejaVuSansMono;
+    src: local(DejaVuSansMono), url('/fonts/DejaVuSansMono.ttf') format('opentype');
+}
+
 body {
+    font-family: DejaVuSansMono;
     color: rgb(0,204,0);
     background-color: black;
     font-size: 16px;
