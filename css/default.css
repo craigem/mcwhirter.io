@@ -82,3 +82,8 @@ div#footer img {
     left: 1%;
     padding-left: 1%;
 }
+
+div#content a, div#content a:visited {
+    color: rgb(0,204,0);
+    text-decoration: none;
+}
