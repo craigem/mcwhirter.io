@@ -9,7 +9,9 @@ mcwhirter.io
 ============
 
 git_ :
+
 social_ :
+
 blog_ :
 
 .. _git: https://git.mcwhirter.io
