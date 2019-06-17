@@ -64,4 +64,4 @@ packages:
 # compiler-check: newer-minor
 
 nix:
-  packages: [ zlib.dev ]
+  packages: [ zlib.out, zlib.dev ]
