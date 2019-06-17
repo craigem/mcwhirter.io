@@ -8,12 +8,12 @@ title: mcwhirter.io
 mcwhirter.io
 ============
 
-git_ :
+code_ :
 
 social_ :
 
 blog_ :
 
-.. _git: https://git.mcwhirter.io
+.. _code: https://code.mcwhirter.io
 .. _social: https://social.mcwhirter.io
 .. _blog: https://mcwhirter.com.au
