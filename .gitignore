@@ -1,6 +1,8 @@
-site
 *.hi
 *.o
+*.swp
+.direnv
 _cache
 _site
-.stack-work
+dist-newstyle/
+result
