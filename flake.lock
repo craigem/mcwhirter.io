@@ -8,11 +8,11 @@
         "nixpkgs-unstable": "nixpkgs-unstable"
       },
       "locked": {
-        "lastModified": 1620263816,
-        "narHash": "sha256-V0W9Nz9C0b2ER/4t+IWhh07olM1X/smu/o5CFFIRN+8=",
+        "lastModified": 1620350290,
+        "narHash": "sha256-isJ3v95FbRZG68yz5KJMVJEO+uBu4eR8ZAq1utTgtm8=",
         "owner": "input-output-hk",
         "repo": "haskell.nix",
-        "rev": "7891e5a0007b3220eb4954d808178620d09115e0",
+        "rev": "ec898c02d17899282663544e451ef330cf7d1d1f",
         "type": "github"
       },
       "original": {
