@@ -35,7 +35,9 @@
         flake = pkgs.mcwhirterIoProject.flake {};
       in flake // {
         # Built by `nix build .`
-        defaultPackage = flake.packages."cyclone-ibis:exe:site";
+        defaultPackage = flake.packages."project:exe:site";
+        # Executed by `nix run . -- <args?>`
+        defaultApp = flake.packages."project:exe:site";
 
         apps = (pkgs.mcwhirterIoProject) // { inherit repl; };
 
@@ -44,8 +46,9 @@
         devShell = pkgs.mcwhirterIoProject.shellFor {
           tools = {
             cabal = "latest";
-            hlint = "latest";
+            hakyll = "latest";
             haskell-language-server = "latest";
+            hlint = "latest";
           };
         };
       });
