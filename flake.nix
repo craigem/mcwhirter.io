@@ -1,55 +1,21 @@
 {
-  description = "mcwhirter.io website";
+  description = "My Website";
+  inputs.nixpkgs.url = "github:nixos/nixpkgs";
+  inputs.hakyll-flakes.url = "github:Radvendii/hakyll-flakes";
+  inputs.flake-utils.url = "github:numtide/flake-utils";
 
-  inputs = {
-    haskellNix.url = "github:input-output-hk/haskell.nix";
-    nixpkgs.follows = "haskellNix/nixpkgs-unstable";
-    utils.url = "github:numtide/flake-utils";
-  };
-  outputs = { self, nixpkgs, utils, haskellNix }:
-    utils.lib.eachSystem [ "x86_64-linux" "aarch64-linux" ] (system:
-      let
-        overlays = [ haskellNix.overlay
-          (final: prev: {
-            # This overlay adds our project to pkgs
-            mcwhirterIoProject =
-              final.haskell-nix.project' {
-                src = ./.;
-                compiler-nix-name = "ghc8104";
-              };
-          })
+  outputs = { self, hakyll-flakes, flake-utils, nixpkgs }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      hakyll-flakes.mkAllOutputs {
+        inherit system;
+        name = "mcwhirter-io";
+        src = ./.;
+        websiteBuildInputs = with nixpkgs.legacyPackages.${system}; [
+          rubber
+          texlive.combined.scheme-full
+          poppler_utils
         ];
-
-        lib = pkgs.lib;
-
-        # Run with `nix run .#repl`
-        repl = utils.lib.mkApp {
-          drv = pkgs.writeShellScriptBin "repl" ''
-            confnix=$(mktemp)
-            echo "builtins.getFlake (toString $(git rev-parse --show-toplevel))" >$confnix
-            trap "rm $confnix" EXIT
-            nix repl $confnix
-          '';
-        };
-        pkgs = import nixpkgs { inherit system overlays; };
-        flake = pkgs.mcwhirterIoProject.flake {};
-      in flake // {
-        # Built by `nix build .`
-        defaultPackage = flake.packages."project:exe:site";
-        # Executed by `nix run . -- <args?>`
-        defaultApp = flake.packages."project:exe:site";
-
-        apps = (pkgs.mcwhirterIoProject) // { inherit repl; };
-
-        # This is used by `nix develop .` to open a shell for use with
-        # `cabal`, `hlint` and `haskell-language-server`
-        devShell = pkgs.mcwhirterIoProject.shellFor {
-          tools = {
-            cabal = "latest";
-            hakyll = "latest";
-            haskell-language-server = "latest";
-            hlint = "latest";
-          };
-        };
-      });
+      }
+    );
 }
